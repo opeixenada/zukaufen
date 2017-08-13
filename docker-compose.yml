@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  zukaufen:
+    image: "zukaufen:1.0"
+    command: "-Dconfig.file=/opt/docker/conf/config.json -Dmongo.host=mongo zukaufen.Main"
+    volumes:
+      - ./conf:/opt/docker/conf
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    ports:
+      - "8000:8000"
+
