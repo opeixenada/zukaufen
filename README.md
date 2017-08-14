@@ -219,8 +219,8 @@ data availability.
 
 For synchronization we need new fields to be stored on the client.
 
-1. For every item and every list add optional string field `backendId`.
-2. Timestamp of the last successful sync or update operation.
-3. For every item and every list keep a timestamp of their last edit.
+1. Store timestamp of the last successful sync or update operation.
+2. For every item and every list add optional string field `backendId`.
+3. For every item and every list add optional date-time field to store timestamp of the last edit.
 4. For every item and every list add boolean field `deleted`. Set it to `true` instead of 
 removing an item when performed delete operation and failed to sync.
