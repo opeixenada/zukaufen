@@ -33,7 +33,7 @@ Return format:
         "items": {
             "id": <item id, string>,
             "name": <item name, string>,
-            "qty": <quantity description, string>,
+            "qty": <quantity description, optional string>,
             "checked": <boolean>
         }
     }
@@ -79,7 +79,7 @@ POST /api/lists
         "items": {
             "id": <backend item id, optional string>,
             "name": <item name, string>,
-            "qty": <quantity description, string>,
+            "qty": <quantity description, optional string>,
             "checked": <boolean>,
             "deleted": <boolean>,
             "ts": <timestamp of the last change>,
@@ -208,7 +208,7 @@ data availability.
 {
     "_id": <backend item id, ObjectId>,
     "name": <name, string>,
-    "qty": <quantity descriptor, string>,
+    "qty": <quantity descriptor, optional string>,
     "checked": <boolean>,
     "ts": <timestamp of the last change>
 }
